@@ -36,7 +36,10 @@ namespace TGS.Challenge.Tests
     [Test()]
     public void Funeral_IsAnagram_Reel_fun()
     {
-      var result = _anagram.AreAnagrams("Funeral", "Reel fun");
+      //Error In Unit Test 
+      //var result = _anagram.AreAnagrams("Funeral", "Reel fun");
+
+      var result = _anagram.AreAnagrams("Funeral", "Real fun");
 
       Assert.IsTrue(result);
     }
@@ -48,7 +51,7 @@ namespace TGS.Challenge.Tests
 
       Assert.IsTrue(result);
     }
-    
+
     [Test()]
     public void Listen_Is_NOT_Anagram_Silence()
     {

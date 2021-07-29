@@ -15,11 +15,30 @@ namespace TGS.Challenge
         sure the unit tests are correct too.
      */
 
-    public class EquivalenceIndex
+  public class EquivalenceIndex
+  {
+    public int Find(int[] numbers)
     {
-      public int Find(int[] numbers)
+      for (int i = 0; i < numbers.Length; i++)
       {
-        return -99;
+        int leftSum = 0;
+        int rightSum = 0;
+
+        for (int leftNum = 0; leftNum < i; leftNum++)
+        {
+          leftSum += numbers[leftNum];
+        }
+
+        for (int rightNum = i + 1; rightNum < numbers.Length; rightNum++)
+        {
+          rightSum += numbers[rightNum];
+        }
+
+        if (leftSum == rightSum)
+          return i;
       }
+
+      return -1;
     }
+  }
 }

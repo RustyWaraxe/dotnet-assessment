@@ -9,15 +9,15 @@ namespace TGS.Challenge.Tests
 
     public EquivalenceIndexTests()
     {
-      this._equivalenceIndex= new EquivalenceIndex();
+      this._equivalenceIndex = new EquivalenceIndex();
     }
 
     [Test()]
     public void Returns_Index_ForValidNumberSequence()
     {
-        var index = _equivalenceIndex.Find(new int[] { 1, 2, 3, 4, 5, 7, 8, 10, 12 });
+      var index = _equivalenceIndex.Find(new int[] { 1, 2, 3, 4, 5, 7, 8, 10, 12 });
 
-        Assert.AreEqual(6, index);
+      Assert.AreEqual(6, index);
     }
 
     [Test()]
@@ -31,17 +31,17 @@ namespace TGS.Challenge.Tests
     [Test()]
     public void Returns_Index_ForValidNumberSequence_LeftWeighted()
     {
-        var index = _equivalenceIndex.Find(new int[] { 10, 11, 3, 1, 1, 1, 9, 9 });
+      var index = _equivalenceIndex.Find(new int[] { 10, 11, 3, 1, 1, 1, 9, 9 });
 
-        Assert.AreEqual(2, index);
+      Assert.AreEqual(2, index);
     }
 
     [Test()]
     public void Returns_Index_ForValidNumberSequence_RightWeighted()
     {
-        var index = _equivalenceIndex.Find(new int[] { 4, 3, 5, 6, 7, 5, 10, 15 });
+      var index = _equivalenceIndex.Find(new int[] { 4, 3, 5, 6, 7, 5, 10, 15 });
 
-        Assert.AreEqual(5, index);
+      Assert.AreEqual(5, index);
     }
-  }  
+  }
 }
